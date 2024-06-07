@@ -11,5 +11,15 @@
 <h3 align="left">Languages and Tools:</h3>
 <p align="left"> <a href="https://pandas.pydata.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/2ae2a900d2f041da66e950e4d48052658d850630/icons/pandas/pandas-original.svg" alt="pandas" width="40" height="40"/> </a> <a href="https://www.python.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a> <a href="https://scikit-learn.org/" target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="scikit_learn" width="40" height="40"/> </a> <a href="https://seaborn.pydata.org/" target="_blank" rel="noreferrer"> <img src="https://seaborn.pydata.org/_images/logo-mark-lightbg.svg" alt="seaborn" width="40" height="40"/> </a> </p>
 
+<h2 align="center">Failing servers detection System! 🛰 ⚡ </h2>
 
-https://github.com/RashmiImasha/Failing-servers-detecting-system-on-a-network/assets/139683223/1a481cf2-68da-418b-970b-484183cd53d8
+📜 I use the machine learning technique: Anomaly detection algorithm to identify failing servers that are located in the network. The importance of this algorithm is that it can flag anomalous servers by checking all the servers in the data set.
+
+📜 These are the steps that I followed here : 
+
+ 🔺 Loading the data set.
+ 🔺 Visualizing distribution of data set.
+ 🔺 Estimating the Gaussian distribution for each of the features.
+ 🔺 Visualizing the contours of the gaussian distribution.
+ 🔺 Selecting the threshold value(epsilon) using the cross validation set.
+ 🔺 The contours of the gaussian distribution is fit to the dataset and identify anomalous servers.
