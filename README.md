@@ -1,30 +1,44 @@
-<h1 align="center">Hi 👋, I'm Rashmi Imasha</h1>
-<h3 align="center">I am a Computer Engineering student with a strong passion for AI, Machine Learning, and Web Development.</h3>
+# Failing Servers Detection System Using Anomaly Detection 🚨
 
-- 📫 How to reach me **rimasha317@gmail.com**
+This project implements an anomaly detection system to identify failing servers in a network by analyzing throughput and latency metrics. It uses a Gaussian-based statistical model to detect anomalies that indicate server failures.
 
-<h3 align="left">Connect with me:</h3>
-<p align="left">
-<a href="https://linkedin.com/in/rashmi-mallawaarachchi" target="blank"><img align="center" src="https://raw.githubusercontent.com/rahuldkjain/github-profile-readme-generator/master/src/images/icons/Social/linked-in-alt.svg" alt="rashmi mallawaarachchi" height="30" width="40" /></a>
-</p>
+---
 
-<h3 align="left">Languages and Tools:</h3>
-<p align="left"> 
-  <a href="https://www.python.org" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/python/python-original.svg" alt="python" width="40" height="40"/> </a> 
-  <a href="https://pandas.pydata.org/" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/2ae2a900d2f041da66e950e4d48052658d850630/icons/pandas/pandas-original.svg" alt="pandas" width="40" height="40"/> </a> 
-  <a href="https://scikit-learn.org/" target="_blank" rel="noreferrer"> <img src="https://upload.wikimedia.org/wikipedia/commons/0/05/Scikit_learn_logo_small.svg" alt="scikit_learn" width="40" height="40"/> </a> 
-  <a href="https://seaborn.pydata.org/" target="_blank" rel="noreferrer"> <img src="https://seaborn.pydata.org/_images/logo-mark-lightbg.svg" alt="seaborn" width="40" height="40"/> </a> 
-</p>
+## Problem Statement
 
-<h2 align="center">Failing Servers Detection System! 🛰 ⚡</h2>
+In large-scale networks, failing servers can cause downtime, degraded performance, and user dissatisfaction. Detecting failures proactively is critical to maintain service reliability.  
 
-📜 I use the machine learning technique: Anomaly detection algorithm to identify failing servers that are located in the network. The importance of this algorithm is that it can flag anomalous servers by checking all the servers in the data set.
+**Challenges:**
+- Manual monitoring is inefficient for large networks.
+- Server metrics may vary naturally, making it difficult to detect anomalies.
+- Early detection requires accurate identification of unusual patterns in real-time data.
 
-📜 These are the steps that I followed:
+**Goal:** Automatically identify servers exhibiting anomalous behavior using historical server metrics.
 
-🔺 Loading the dataset.  
-🔺 Visualizing the distribution of the dataset.  
-🔺 Estimating the Gaussian distribution for each of the features.  
-🔺 Visualizing the contours of the Gaussian distribution.  
-🔺 Selecting the threshold value (epsilon) using the cross-validation set.  
-🔺 The contours of the Gaussian distribution are fit to the dataset to identify anomalous servers.
+---
+
+## Solution Overview
+
+The system applies a multivariate Gaussian model to learn normal behavior of server metrics (throughput and latency). Anomalies are detected as points that deviate significantly from this learned distribution.  
+
+**Key Steps:**
+1. **Data Collection:** Collect server performance metrics (throughput and latency).
+2. **Data Preprocessing:** Normalize metrics and split into training and validation sets.
+3. **Gaussian Parameter Estimation:** Estimate mean and variance for each metric to model normal behavior.
+4. **Anomaly Detection:** Identify servers with metrics having low probability under the Gaussian model.
+5. **Threshold Selection:** Use cross-validation to select the optimal probability threshold (epsilon) for classifying anomalies.
+6. **Visualization:** Highlight detected anomalies in scatter plots for easy inspection.
+
+---
+
+## Machine Learning Pipeline
+
+```mermaid
+graph TD
+A[Server Metrics Data] --> B[Data Preprocessing]
+B --> C[Feature Extraction & Normalization]
+C --> D[Gaussian Distribution Estimation]
+D --> E[Probability Calculation (Multivariate Gaussian)]
+E --> F[Select Threshold using Cross-Validation]
+F --> G[Anomaly Detection]
+G --> H[Visualization of Anomalies]
