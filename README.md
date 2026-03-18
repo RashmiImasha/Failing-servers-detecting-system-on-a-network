@@ -50,6 +50,7 @@ The system applies a multivariate Gaussian model to learn normal behavior of ser
    <img src="readme_images/final.png" width="600">
 
 **🔹 Tech Stack**
+---
 
 Python | Numpy | Matplotlib | Pandas | Scikit-learn | Seaborn | Jupyter Notebook
 
