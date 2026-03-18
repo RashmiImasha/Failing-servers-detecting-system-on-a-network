@@ -1,4 +1,12 @@
-# Failing Servers Detection System Using Anomaly Detection 🚨
+# 🚨 Failing Servers Detection System Using Anomaly Detection 
+
+![Python](https://img.shields.io/badge/Python-3.8+-blue)
+![NumPy](https://img.shields.io/badge/NumPy-Array-yellow)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-Plot-red)
+![Pandas](https://img.shields.io/badge/Pandas-DataFrame-green)
+![Scikit-learn](https://img.shields.io/badge/Scikit--learn-ML-orange)
+![Seaborn](https://img.shields.io/badge/Seaborn-Visualization-purple)
+![Jupyter Notebook](https://img.shields.io/badge/Jupyter-Notebook-lightgrey)
 
 This project implements an anomaly detection system to identify failing servers in a network by analyzing throughput and latency metrics. It uses a Gaussian-based statistical model(anomaly detection model) to detect anomalies that indicate server failures.
 
@@ -40,5 +48,14 @@ The system applies a multivariate Gaussian model to learn normal behavior of ser
    <img src="readme_images/final.png" width="600">
 
 ---
+
+## Tech Stack
+
+Python | Numpy | Matplotlib | Pandas | Scikit-learn | Seaborn | Jupyter Notebook
+
+---
+
+
+
 
 
