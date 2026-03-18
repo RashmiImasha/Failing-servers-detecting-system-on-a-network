@@ -30,10 +30,12 @@ In large-scale networks, failing servers can cause downtime, degraded performanc
 The system applies a multivariate Gaussian model to learn normal behavior of server metrics (throughput and latency). Anomalies are detected as points that deviate significantly from this learned distribution.  
 
 **🔹 System Architecture**
+---
 
 <img src="readme_images/system.png" width="800">
 
 **🔹 Machine Learning Pipeline**
+---
 
 <img src="readme_images/pipeline.png" height="700">
 
@@ -47,13 +49,14 @@ The system applies a multivariate Gaussian model to learn normal behavior of ser
 
    <img src="readme_images/final.png" width="600">
 
----
-
-## Tech Stack
+**🔹 Tech Stack**
 
 Python | Numpy | Matplotlib | Pandas | Scikit-learn | Seaborn | Jupyter Notebook
 
 ---
+
+
+
 
 
 
