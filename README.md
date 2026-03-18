@@ -1,6 +1,6 @@
 # Failing Servers Detection System Using Anomaly Detection 🚨
 
-This project implements an anomaly detection system to identify failing servers in a network by analyzing throughput and latency metrics. It uses a Gaussian-based statistical model to detect anomalies that indicate server failures.
+This project implements an anomaly detection system to identify failing servers in a network by analyzing throughput and latency metrics. It uses a Gaussian-based statistical model(anomaly detection model) to detect anomalies that indicate server failures.
 
 ---
 
@@ -21,7 +21,15 @@ In large-scale networks, failing servers can cause downtime, degraded performanc
 
 The system applies a multivariate Gaussian model to learn normal behavior of server metrics (throughput and latency). Anomalies are detected as points that deviate significantly from this learned distribution.  
 
-**Key Steps:**
+**🔹 System Architecture**
+
+<img src="readme_images/system.png" width="700">
+
+**🔹 Machine Learning Pipeline**
+
+<img src="readme_images/pipeline.png" width="700">
+
+**Pipeline Description:**
 1. **Data Collection:** Collect server performance metrics (throughput and latency).
 2. **Data Preprocessing:** Normalize metrics and split into training and validation sets.
 3. **Gaussian Parameter Estimation:** Estimate mean and variance for each metric to model normal behavior.
@@ -31,14 +39,4 @@ The system applies a multivariate Gaussian model to learn normal behavior of ser
 
 ---
 
-## Machine Learning Pipeline
 
-```mermaid
-graph TD
-A[Server Metrics Data] --> B[Data Preprocessing]
-B --> C[Feature Extraction & Normalization]
-C --> D[Gaussian Distribution Estimation]
-D --> E[Probability Calculation (Multivariate Gaussian)]
-E --> F[Select Threshold using Cross-Validation]
-F --> G[Anomaly Detection]
-G --> H[Visualization of Anomalies]
