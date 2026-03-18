@@ -23,11 +23,11 @@ The system applies a multivariate Gaussian model to learn normal behavior of ser
 
 **🔹 System Architecture**
 
-<img src="readme_images/system.png" width="700">
+<img src="readme_images/system.png" width="800">
 
 **🔹 Machine Learning Pipeline**
 
-<img src="readme_images/pipeline.png" width="700">
+<img src="readme_images/pipeline.png" height="700">
 
 **Pipeline Description:**
 1. **Data Collection:** Collect server performance metrics (throughput and latency).
@@ -36,6 +36,8 @@ The system applies a multivariate Gaussian model to learn normal behavior of ser
 4. **Anomaly Detection:** Identify servers with metrics having low probability under the Gaussian model.
 5. **Threshold Selection:** Use cross-validation to select the optimal probability threshold (epsilon) for classifying anomalies.
 6. **Visualization:** Highlight detected anomalies in scatter plots for easy inspection.
+
+   <img src="readme_images/final.png" width="600">
 
 ---
 
