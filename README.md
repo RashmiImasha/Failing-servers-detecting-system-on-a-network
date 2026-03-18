@@ -1,4 +1,4 @@
-# 🚨 Failing Servers Detection System Using Anomaly Detection 
+# Failing Servers Detection System Using Anomaly Detection 🚨
 
 ![Python](https://img.shields.io/badge/Python-3.8+-blue)
 ![NumPy](https://img.shields.io/badge/NumPy-Array-yellow)
